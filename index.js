@@ -35,7 +35,7 @@ const newCard = ({
 
   const loadInitialTaskCards = () => {
     //access local storage
-   const getInitialData = localStorage.getItem("tasky");
+   const getInitialData = localStorage.getItem("tasky"); //null
    if(!getInitialData) return;
 
    //convert stringified object to object
@@ -67,8 +67,9 @@ const saveChanges = () =>{
     console.log(globalStore);
      
     //add to localstorage
-    localStorage.setItem("tasky",JSON.stringify({cards: globalStore}));
+    localStorage.setItem("tasky",JSON.stringify ({cards: globalStore})); 
     //key->data
 
 };
 
+ 
